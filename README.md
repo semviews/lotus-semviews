@@ -1,6 +1,6 @@
 # semviews
 
-This repository accompanies the paper *SemViews: Answering Semantic Queries Using Semantic Views* (see [Citation](#citation)). It contains the
+This repository accompanies the paper *Semantic Views: Certified Reuse of LLM Labels Across Semantic Queries* (see [Citation](#citation)). It contains the
 full implementation, the recorded model outputs ("tapes") that every experiment replays, the
 result files behind every figure and table, and the scripts that regenerate them.
 
@@ -113,7 +113,7 @@ pubmed-pool` fetches it and checks its hash against the pool the experiments use
 
 ```bibtex
 @unpublished{hassanzadeh2026semviews,
-  title  = {SemViews: Answering Semantic Queries Using Semantic Views},
+  title  = {Semantic Views: Certified Reuse of LLM Labels Across Semantic Queries},
   author = {Hassanzadeh, Oktie and Subramanian, Dharmashankar},
   note   = {Under review},
   year   = {2026},

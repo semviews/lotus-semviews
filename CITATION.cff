@@ -11,7 +11,7 @@ authors:
 repository-code: https://github.com/semviews/lotus-semviews
 preferred-citation:
   type: unpublished
-  title: 'SemViews: Answering Semantic Queries Using Semantic Views'
+  title: 'Semantic Views: Certified Reuse of LLM Labels Across Semantic Queries'
   authors:
   - family-names: Hassanzadeh
     given-names: Oktie

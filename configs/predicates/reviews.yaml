@@ -1,0 +1,163 @@
+dataset: reviews
+column: text
+predicates:
+- id: battery_complaint
+  langex: '{text} complains about the battery'
+  level: null
+  human: null
+- id: battery_overheats
+  langex: '{text} says the battery or device overheats'
+  level: null
+  human: null
+- id: battery_life_praise
+  langex: '{text} praises the battery life'
+  level: null
+  human: null
+- id: hardware_defect
+  langex: '{text} reports a hardware defect'
+  level: null
+  human: null
+- id: broke_quickly
+  langex: '{text} says the product broke or stopped working within a few weeks'
+  level: null
+  human: null
+- id: arrived_damaged
+  langex: '{text} says the product arrived damaged'
+  level: null
+  human: null
+- id: wrong_item
+  langex: '{text} says the wrong item was received'
+  level: null
+  human: null
+- id: missing_parts
+  langex: '{text} says parts or accessories were missing'
+  level: null
+  human: null
+- id: shipping
+  langex: '{text} mentions shipping or delivery'
+  level: null
+  human: null
+- id: customer_service
+  langex: '{text} mentions customer service or support'
+  level: null
+  human: null
+- id: return_refund
+  langex: '{text} mentions returning the product or getting a refund'
+  level: null
+  human: null
+- id: warranty
+  langex: '{text} mentions a warranty claim or warranty coverage'
+  level: null
+  human: null
+- id: sound_quality
+  langex: '{text} discusses sound quality'
+  level: null
+  human: null
+- id: sound_praise
+  langex: '{text} praises the sound quality'
+  level: null
+  human: null
+- id: noise_cancel
+  langex: '{text} mentions noise cancellation'
+  level: null
+  human: null
+- id: screen
+  langex: '{text} discusses the screen or display'
+  level: null
+  human: null
+- id: price_value
+  langex: '{text} comments on price or value for money'
+  level: null
+  human: null
+- id: recommends
+  langex: '{text} recommends the product'
+  level: null
+  human: null
+- id: not_recommend
+  langex: '{text} advises others not to buy the product'
+  level: null
+  human: null
+- id: negative
+  langex: '{text} is overall negative about the product'
+  level: null
+  human: null
+- id: positive
+  langex: '{text} is overall positive about the product'
+  level: null
+  human: null
+- id: mixed
+  langex: '{text} expresses both positive and negative opinions about the product'
+  level: null
+  human: null
+- id: apple
+  langex: '{text} mentions an Apple product such as an iPhone, iPad, or Mac'
+  level: null
+  human: null
+- id: compare_brand
+  langex: '{text} compares the product with another brand or model'
+  level: null
+  human: null
+- id: gift
+  langex: '{text} says the product was bought as a gift'
+  level: null
+  human: null
+- id: kids
+  langex: '{text} mentions children or kids'
+  level: null
+  human: null
+- id: setup_easy
+  langex: '{text} says the product was easy to set up or install'
+  level: null
+  human: null
+- id: instructions
+  langex: '{text} complains about missing or unclear instructions'
+  level: null
+  human: null
+- id: connectivity
+  langex: '{text} reports Bluetooth, Wi-Fi, or pairing problems'
+  level: null
+  human: null
+- id: charging
+  langex: '{text} reports problems with charging'
+  level: null
+  human: null
+- id: cable
+  langex: '{text} discusses a cable or cord'
+  level: null
+  human: null
+- id: software
+  langex: '{text} reports software, app, or firmware problems'
+  level: null
+  human: null
+- id: build_quality_poor
+  langex: '{text} complains about poor build quality'
+  level: null
+  human: null
+- id: durability_praise
+  langex: '{text} praises durability or sturdiness'
+  level: null
+  human: null
+- id: comfort
+  langex: '{text} discusses comfort or fit'
+  level: null
+  human: null
+- id: counterfeit
+  langex: '{text} suspects the product is fake or counterfeit'
+  level: null
+  human: null
+- id: safety
+  langex: '{text} mentions a safety hazard such as fire, smoke, or electric shock'
+  level: null
+  human: null
+- id: smell
+  langex: '{text} mentions a smell or odor'
+  level: null
+  human: null
+- id: as_described
+  langex: '{text} says the product works as described or as advertised'
+  level: null
+  human: null
+- id: repurchase
+  langex: '{text} says they would buy the product again or bought more than one'
+  level: null
+  human: null

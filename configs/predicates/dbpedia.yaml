@@ -1,0 +1,269 @@
+dataset: dbpedia
+column: text
+predicates:
+- id: agent
+  langex: '{text} describes a person or an organization'
+  level: 1
+  human:
+    l1:
+    - Agent
+- id: place
+  langex: '{text} describes a place'
+  level: 1
+  human:
+    l1:
+    - Place
+- id: species
+  langex: '{text} describes a biological species'
+  level: 1
+  human:
+    l1:
+    - Species
+- id: work
+  langex: '{text} describes a creative work such as a book, film, album, song, or magazine'
+  level: 1
+  human:
+    l1:
+    - Work
+- id: event
+  langex: '{text} describes an event'
+  level: 1
+  human:
+    l1:
+    - Event
+- id: sports_season
+  langex: '{text} describes a particular season of a sports team or league'
+  level: 1
+  human:
+    l1:
+    - SportsSeason
+- id: person
+  langex: '{text} describes a real person'
+  level: 1
+  human:
+    l2:
+    - Actor
+    - Artist
+    - Athlete
+    - Boxer
+    - BritishRoyalty
+    - Cleric
+    - Coach
+    - GridironFootballPlayer
+    - MotorcycleRider
+    - MusicalArtist
+    - OrganisationMember
+    - Person
+    - Politician
+    - Presenter
+    - RacingDriver
+    - Scientist
+    - SportsManager
+    - VolleyballPlayer
+    - WinterSportPlayer
+    - Wrestler
+    - Writer
+- id: organization
+  langex: '{text} describes an organization'
+  level: 1
+  human:
+    l2:
+    - Company
+    - Organisation
+    - EducationalInstitution
+    - SportsTeam
+    - Broadcaster
+    - Group
+    - SportsLeague
+- id: athlete
+  langex: '{text} describes an athlete'
+  level: 2
+  human:
+    l2:
+    - Athlete
+- id: politician
+  langex: '{text} describes a politician'
+  level: 2
+  human:
+    l2:
+    - Politician
+- id: company
+  langex: '{text} describes a company'
+  level: 2
+  human:
+    l2:
+    - Company
+- id: building
+  langex: '{text} describes a building'
+  level: 2
+  human:
+    l2:
+    - Building
+- id: animal
+  langex: '{text} describes an animal species'
+  level: 2
+  human:
+    l2:
+    - Animal
+- id: musical_work
+  langex: '{text} describes a musical work such as an album or song'
+  level: 2
+  human:
+    l2:
+    - MusicalWork
+- id: natural_place
+  langex: '{text} describes a natural place such as a mountain, lake, or river'
+  level: 2
+  human:
+    l2:
+    - NaturalPlace
+- id: societal_event
+  langex: '{text} describes a societal event such as an election, war, or convention'
+  level: 2
+  human:
+    l2:
+    - SocietalEvent
+- id: route
+  langex: '{text} describes a road, railway, or other route of transportation'
+  level: 2
+  human:
+    l2:
+    - RouteOfTransportation
+- id: periodical
+  langex: '{text} describes a newspaper, magazine, or academic journal'
+  level: 2
+  human:
+    l2:
+    - PeriodicalLiterature
+- id: winter_sport_player
+  langex: '{text} describes a winter sport player such as an ice hockey player, skier, or figure skater'
+  level: 2
+  human:
+    l2:
+    - WinterSportPlayer
+- id: sports_team
+  langex: '{text} describes a sports team'
+  level: 2
+  human:
+    l2:
+    - SportsTeam
+- id: cleric
+  langex: '{text} describes a member of the clergy'
+  level: 2
+  human:
+    l2:
+    - Cleric
+- id: artist
+  langex: '{text} describes a visual artist, painter, or comedian'
+  level: 2
+  human:
+    l2:
+    - Artist
+- id: team_season
+  langex: '{text} describes a season of a specific sports team'
+  level: 2
+  human:
+    l2:
+    - SportsTeamSeason
+- id: tournament
+  langex: '{text} describes a sports tournament'
+  level: 2
+  human:
+    l2:
+    - Tournament
+- id: educational_institution
+  langex: '{text} describes a school, college, or university'
+  level: 2
+  human:
+    l2:
+    - EducationalInstitution
+- id: infrastructure
+  langex: '{text} describes an infrastructure facility such as an airport, dam, or power station'
+  level: 2
+  human:
+    l2:
+    - Infrastructure
+- id: broadcaster
+  langex: '{text} describes a radio or television broadcaster'
+  level: 2
+  human:
+    l2:
+    - Broadcaster
+- id: settlement
+  langex: '{text} describes a city, town, or village'
+  level: 2
+  human:
+    l2:
+    - Settlement
+- id: sports_event
+  langex: '{text} describes a sports event'
+  level: 2
+  human:
+    l2:
+    - SportsEvent
+- id: plant
+  langex: '{text} describes a plant species'
+  level: 2
+  human:
+    l2:
+    - Plant
+- id: soccer_player
+  langex: '{text} describes a soccer player'
+  level: 3
+  human:
+    l3:
+    - SoccerPlayer
+- id: gymnast
+  langex: '{text} describes a gymnast'
+  level: 3
+  human:
+    l3:
+    - Gymnast
+- id: mountain
+  langex: '{text} describes a mountain'
+  level: 3
+  human:
+    l3:
+    - Mountain
+- id: lake
+  langex: '{text} describes a lake'
+  level: 3
+  human:
+    l3:
+    - Lake
+- id: airport
+  langex: '{text} describes an airport'
+  level: 3
+  human:
+    l3:
+    - Airport
+- id: museum
+  langex: '{text} describes a museum'
+  level: 3
+  human:
+    l3:
+    - Museum
+- id: election
+  langex: '{text} describes an election'
+  level: 3
+  human:
+    l3:
+    - Election
+- id: fish
+  langex: '{text} describes a fish species'
+  level: 3
+  human:
+    l3:
+    - Fish
+- id: amphibian
+  langex: '{text} describes an amphibian species'
+  level: 3
+  human:
+    l3:
+    - Amphibian
+- id: town
+  langex: '{text} describes a town'
+  level: 3
+  human:
+    l3:
+    - Town

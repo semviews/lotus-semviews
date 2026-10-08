@@ -1,0 +1,54 @@
+# E13 (experiments/scale_real.py): 8 predicates of configs/predicates/dbpedia.yaml, chosen with
+# numpy default_rng(20261006).choice(40, 8, replace=False), labeled by the LLM oracle on the
+# 100,000-tuple relation data/datasets/dbpedia_100k.parquet. Text identical to the original pool.
+dataset: dbpedia_100k
+column: text
+predicates:
+- id: athlete
+  langex: '{text} describes an athlete'
+  level: 2
+  human:
+    l2:
+    - Athlete
+- id: building
+  langex: '{text} describes a building'
+  level: 2
+  human:
+    l2:
+    - Building
+- id: musical_work
+  langex: '{text} describes a musical work such as an album or song'
+  level: 2
+  human:
+    l2:
+    - MusicalWork
+- id: cleric
+  langex: '{text} describes a member of the clergy'
+  level: 2
+  human:
+    l2:
+    - Cleric
+- id: educational_institution
+  langex: '{text} describes a school, college, or university'
+  level: 2
+  human:
+    l2:
+    - EducationalInstitution
+- id: settlement
+  langex: '{text} describes a city, town, or village'
+  level: 2
+  human:
+    l2:
+    - Settlement
+- id: election
+  langex: '{text} describes an election'
+  level: 3
+  human:
+    l3:
+    - Election
+- id: fish
+  langex: '{text} describes a fish species'
+  level: 3
+  human:
+    l3:
+    - Fish

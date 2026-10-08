@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: If you use this software, please cite the paper in preferred-citation.
+title: semviews
+type: software
+license: Apache-2.0
+authors:
+- family-names: Hassanzadeh
+  given-names: Oktie
+- family-names: Subramanian
+  given-names: Dharmashankar
+repository-code: https://github.com/semviews/lotus-semviews
+preferred-citation:
+  type: unpublished
+  title: 'SemViews: Answering Semantic Queries Using Semantic Views'
+  authors:
+  - family-names: Hassanzadeh
+    given-names: Oktie
+  - family-names: Subramanian
+    given-names: Dharmashankar
+  year: 2026
+  notes: Under review

@@ -1,0 +1,11 @@
+# Hard caps on live model spend.
+# Prices are USD per million tokens. Sources opened 2026-10-01: the hosting service's public pricing page
+# (gpt-oss-120b: 0.159 in / 0.636 out) and a third-party calculator for llama-3-3-70b (0.7526 in /
+# 1.484 out); the provider page was ambiguous for llama, so the higher figures are used. Re-check. The tape builder (adapters/lotus/build_tape.py) stops before usd_cap_total would be exceeded.
+usd_cap_total: 750  # raised from 150 to 300, then 750, by the human on 2026-10-06 for E13
+max_live_calls_total: 700000
+price_per_mtok:
+  oracle-llama: {input: 0.7526, output: 1.484}
+  oracle-gptoss: {input: 0.159, output: 0.636}
+  judge: {input: 0.159, output: 0.636}
+  helper: {input: 0.0, output: 0.0}

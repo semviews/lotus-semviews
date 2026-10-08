@@ -1,0 +1,54 @@
+# LiteLLM proxy config template. Copy to serving/litellm.yaml and point each alias at a model
+# endpoint of your choice. Only needed to record new tapes; replaying the shipped tapes needs no
+# models. Checked against litellm==1.103.2. Caching off, no fallbacks, one alias = one model.
+#
+# The shipped tapes were recorded with these models (public names):
+#   oracle-llama   Llama 3.3 70B Instruct     temperature 0, max_tokens 8
+#   oracle-gptoss  gpt-oss-120b               temperature 0, max_tokens 1024, reasoning_effort low
+#   judge          gpt-oss-120b               temperature 0, max_tokens 2048, reasoning_effort medium
+#   helper         Llama 3.2 3B Instruct Q4_K_M (GGUF), local llama.cpp server on port 8081
+#
+# Any OpenAI-compatible hosted endpoint works; see https://docs.litellm.ai/docs/providers for
+# provider-specific `model:` prefixes and parameters. A different host or model version will
+# produce labels that differ from the shipped tapes.
+model_list:
+  - model_name: oracle-llama
+    litellm_params:
+      model: openai/<llama-3.3-70b-instruct model id at your endpoint>
+      api_base: os.environ/ORACLE_API_BASE
+      api_key: os.environ/ORACLE_API_KEY
+      temperature: 0
+      max_tokens: 8
+  - model_name: oracle-gptoss
+    litellm_params:
+      model: openai/<gpt-oss-120b model id at your endpoint>
+      api_base: os.environ/ORACLE_API_BASE
+      api_key: os.environ/ORACLE_API_KEY
+      temperature: 0
+      max_tokens: 1024
+      reasoning_effort: low
+  - model_name: judge
+    litellm_params:
+      model: openai/<gpt-oss-120b model id at your endpoint>
+      api_base: os.environ/ORACLE_API_BASE
+      api_key: os.environ/ORACLE_API_KEY
+      temperature: 0
+      max_tokens: 2048
+      reasoning_effort: medium
+  - model_name: helper
+    litellm_params:
+      model: openai/helper-local       # plain OpenAI-compatible route keeps logprobs intact
+      api_base: http://127.0.0.1:8081/v1
+      api_key: none
+      temperature: 0
+
+litellm_settings:
+  cache: false
+  num_retries: 3
+  drop_params: false                   # never silently drop logprobs
+  request_timeout: 120
+
+general_settings:
+  master_key: os.environ/LITELLM_MASTER_KEY
+  disable_spend_logs: true
+  disable_admin_ui: true

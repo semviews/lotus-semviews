@@ -1,0 +1,284 @@
+dataset: goemotions
+column: text
+human_label_column: emotions
+human_label_format: json_list
+predicates:
+- id: admiration
+  langex: '{text} expresses admiration'
+  level: 2
+  human:
+    emotions:
+    - admiration
+- id: amusement
+  langex: '{text} expresses amusement'
+  level: 2
+  human:
+    emotions:
+    - amusement
+- id: anger
+  langex: '{text} expresses anger'
+  level: 2
+  human:
+    emotions:
+    - anger
+- id: annoyance
+  langex: '{text} expresses annoyance'
+  level: 2
+  human:
+    emotions:
+    - annoyance
+- id: approval
+  langex: '{text} expresses approval'
+  level: 2
+  human:
+    emotions:
+    - approval
+- id: caring
+  langex: '{text} expresses caring'
+  level: 2
+  human:
+    emotions:
+    - caring
+- id: confusion
+  langex: '{text} expresses confusion'
+  level: 2
+  human:
+    emotions:
+    - confusion
+- id: curiosity
+  langex: '{text} expresses curiosity'
+  level: 2
+  human:
+    emotions:
+    - curiosity
+- id: desire
+  langex: '{text} expresses desire'
+  level: 2
+  human:
+    emotions:
+    - desire
+- id: disappointment
+  langex: '{text} expresses disappointment'
+  level: 2
+  human:
+    emotions:
+    - disappointment
+- id: disapproval
+  langex: '{text} expresses disapproval'
+  level: 2
+  human:
+    emotions:
+    - disapproval
+- id: disgust
+  langex: '{text} expresses disgust'
+  level: 2
+  human:
+    emotions:
+    - disgust
+- id: embarrassment
+  langex: '{text} expresses embarrassment'
+  level: 2
+  human:
+    emotions:
+    - embarrassment
+- id: excitement
+  langex: '{text} expresses excitement'
+  level: 2
+  human:
+    emotions:
+    - excitement
+- id: fear
+  langex: '{text} expresses fear'
+  level: 2
+  human:
+    emotions:
+    - fear
+- id: gratitude
+  langex: '{text} expresses gratitude'
+  level: 2
+  human:
+    emotions:
+    - gratitude
+- id: grief
+  langex: '{text} expresses grief'
+  level: 2
+  human:
+    emotions:
+    - grief
+- id: joy
+  langex: '{text} expresses joy'
+  level: 2
+  human:
+    emotions:
+    - joy
+- id: love
+  langex: '{text} expresses love'
+  level: 2
+  human:
+    emotions:
+    - love
+- id: nervousness
+  langex: '{text} expresses nervousness'
+  level: 2
+  human:
+    emotions:
+    - nervousness
+- id: optimism
+  langex: '{text} expresses optimism'
+  level: 2
+  human:
+    emotions:
+    - optimism
+- id: pride
+  langex: '{text} expresses pride'
+  level: 2
+  human:
+    emotions:
+    - pride
+- id: realization
+  langex: '{text} expresses a realization'
+  level: 2
+  human:
+    emotions:
+    - realization
+- id: relief
+  langex: '{text} expresses relief'
+  level: 2
+  human:
+    emotions:
+    - relief
+- id: remorse
+  langex: '{text} expresses remorse'
+  level: 2
+  human:
+    emotions:
+    - remorse
+- id: sadness
+  langex: '{text} expresses sadness'
+  level: 2
+  human:
+    emotions:
+    - sadness
+- id: surprise
+  langex: '{text} expresses surprise'
+  level: 2
+  human:
+    emotions:
+    - surprise
+- id: neutral
+  langex: '{text} is emotionally neutral'
+  level: 1
+  human:
+    emotions:
+    - neutral
+- id: ekman_anger
+  langex: '{text} expresses an anger-related emotion such as anger, annoyance, or disapproval'
+  level: 1
+  human:
+    emotions:
+    - anger
+    - annoyance
+    - disapproval
+- id: ekman_disgust
+  langex: '{text} expresses disgust or revulsion'
+  level: 1
+  human:
+    emotions:
+    - disgust
+- id: ekman_fear
+  langex: '{text} expresses a fear-related emotion such as fear or nervousness'
+  level: 1
+  human:
+    emotions:
+    - fear
+    - nervousness
+- id: ekman_joy
+  langex: '{text} expresses a positive, joy-related emotion such as happiness, gratitude, love, or admiration'
+  level: 1
+  human:
+    emotions:
+    - joy
+    - amusement
+    - approval
+    - excitement
+    - gratitude
+    - love
+    - optimism
+    - relief
+    - pride
+    - admiration
+    - desire
+    - caring
+- id: ekman_sadness
+  langex: '{text} expresses a sadness-related emotion such as sadness, disappointment, grief, or remorse'
+  level: 1
+  human:
+    emotions:
+    - sadness
+    - disappointment
+    - embarrassment
+    - grief
+    - remorse
+- id: ekman_surprise
+  langex: '{text} expresses a surprise-related emotion such as surprise, confusion, or curiosity'
+  level: 1
+  human:
+    emotions:
+    - surprise
+    - realization
+    - confusion
+    - curiosity
+- id: sent_positive
+  langex: '{text} expresses a positive emotion'
+  level: 0
+  human:
+    emotions:
+    - amusement
+    - excitement
+    - joy
+    - love
+    - desire
+    - optimism
+    - caring
+    - pride
+    - admiration
+    - gratitude
+    - relief
+    - approval
+- id: sent_negative
+  langex: '{text} expresses a negative emotion'
+  level: 0
+  human:
+    emotions:
+    - fear
+    - nervousness
+    - remorse
+    - embarrassment
+    - disappointment
+    - sadness
+    - grief
+    - disgust
+    - anger
+    - annoyance
+    - disapproval
+- id: sent_ambiguous
+  langex: '{text} expresses an emotion that is neither clearly positive nor clearly negative, such as surprise or confusion'
+  level: 0
+  human:
+    emotions:
+    - realization
+    - surprise
+    - curiosity
+    - confusion
+- id: is_question
+  langex: '{text} asks a question'
+  level: null
+  human: null
+- id: sarcastic
+  langex: '{text} is sarcastic'
+  level: null
+  human: null
+- id: mentions_person
+  langex: '{text} refers to a specific person by name'
+  level: null
+  human: null

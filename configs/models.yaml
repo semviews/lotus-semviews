@@ -1,0 +1,17 @@
+# Model aliases served by the local proxy. No provider names here.
+proxy_base: http://127.0.0.1:4000
+oracle: oracle-llama          # labels the full tape
+oracle_secondary: oracle-gptoss  # labels a subset for E7
+judge: judge
+helper: helper
+helper_gguf: models/Llama-3.2-3B-Instruct-Q4_K_M.gguf   # chosen by serving/helper_bench.py
+embed: sentence-transformers/all-MiniLM-L6-v2
+sampling:
+  oracle-llama: {temperature: 0, max_tokens: 8}
+  oracle-gptoss: {temperature: 0, max_tokens: 1024, reasoning_effort: low}
+  judge: {temperature: 0, max_tokens: 2048, reasoning_effort: medium}
+  helper: {temperature: 0, max_tokens: 4}   # LOTUS prompt yields 'Answer: True'; scores read from the answer token
+# Exception to the proxy rule: the helper tape reaches the local llama.cpp server
+# directly, because helper requests stalled behind rate-limited oracle traffic in the proxy.
+direct_routes:
+  helper: {api_base: "http://127.0.0.1:8081/v1", model: "openai/helper-local", api_key: "none"}

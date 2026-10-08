@@ -1,0 +1,63 @@
+[project]
+name = "semviews"
+version = "0.1.0"
+description = "Certified cross-query reuse of semantic operator results (semantic views)."
+readme = "README.md"
+license = "Apache-2.0"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "lotus-ai==1.2.4",
+    "litellm==1.103.2",
+    "numpy>=1.25,<2",
+    "pandas>=2,<3",
+    "pyarrow>=15",
+    "scipy>=1.11",
+    "duckdb>=1.0",
+    "pyyaml>=6",
+    "scikit-learn>=1.4",
+    "sentence-transformers>=3,<4",
+    "python-dotenv>=1",
+    "tqdm>=4.66",
+    "datasets>=2.19",
+    "bargain",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8",
+    "hypothesis>=6.100",
+    "ruff>=0.6",
+    "matplotlib>=3.8",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/semviews"]
+
+[tool.uv]
+required-environments = ["sys_platform == 'darwin' and platform_machine == 'arm64'"]
+
+[tool.uv.sources]
+bargain = { git = "https://github.com/ucbepic/BARGAIN", rev = "3502b1a4ffa33ae5e5e99edecada8a127f222a58" }
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+ignore = ["E501", "B905", "B008", "E741", "E742"]  # X, A, O follow the paper's region names
+
+[tool.ruff.lint.per-file-ignores]
+"experiments/run_all.py" = ["E402"]  # BLAS thread env must be set before numpy is imported
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = [
+    "live: needs the local LiteLLM proxy and model access",
+    "slow: long simulation tests",
+]
+addopts = "-m 'not live'"

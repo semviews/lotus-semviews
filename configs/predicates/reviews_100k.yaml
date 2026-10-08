@@ -1,0 +1,38 @@
+# E13 (experiments/scale_real.py): 8 predicates of configs/predicates/reviews.yaml, chosen with
+# numpy default_rng(20261006).choice(40, 8, replace=False), labeled by the LLM oracle on the
+# 100,000-tuple relation data/datasets/reviews_100k.parquet. Text identical to the original pool.
+dataset: reviews_100k
+column: text
+predicates:
+- id: shipping
+  langex: '{text} mentions shipping or delivery'
+  level: null
+  human: null
+- id: warranty
+  langex: '{text} mentions a warranty claim or warranty coverage'
+  level: null
+  human: null
+- id: sound_praise
+  langex: '{text} praises the sound quality'
+  level: null
+  human: null
+- id: positive
+  langex: '{text} is overall positive about the product'
+  level: null
+  human: null
+- id: gift
+  langex: '{text} says the product was bought as a gift'
+  level: null
+  human: null
+- id: instructions
+  langex: '{text} complains about missing or unclear instructions'
+  level: null
+  human: null
+- id: safety
+  langex: '{text} mentions a safety hazard such as fire, smoke, or electric shock'
+  level: null
+  human: null
+- id: smell
+  langex: '{text} mentions a smell or odor'
+  level: null
+  human: null

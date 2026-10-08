@@ -1,0 +1,32 @@
+# secrets
+.env
+.env.*
+!.env.example
+
+# python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.ruff_cache/
+.hypothesis/
+*.egg-info/
+dist/
+build/
+
+# models and generated output
+models/
+data/raw/
+data/cache/
+data/tapes/parts/
+*.gguf
+outputs/
+serving/logs/
+serving/*.pid
+serving/litellm.yaml
+
+# third-party predicate pool, fetched at runtime (make pubmed-pool)
+configs/predicates/pubmed.yaml
+
+.DS_Store
+experiments/results/rerun/

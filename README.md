@@ -78,6 +78,7 @@ in LOTUS.
 | [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) | How the system works: concepts, the `CertifiedFilter` algorithm step by step with pointers into the code, why validity holds regardless of view quality, configuration, the oracle/tape/cost design, the LOTUS integration, baselines, module map, extension points |
 | [docs/REPRODUCE.md](docs/REPRODUCE.md) | How to repeat every experiment: setup, the three levels of reproduction, the command and output of each experiment, a map from each figure and table in the paper to its script and result files, seeds, re-recording tapes |
 | [docs/DATA.md](docs/DATA.md) | Datasets and their sources, predicate pools and workloads, tapes and their schema, result-file schema, models and prices |
+| [docs/AI_USE.md](docs/AI_USE.md) | Use of generative AI tools in writing the code and the paper (ACM policy disclosure) |
 
 ## Repository layout
 
